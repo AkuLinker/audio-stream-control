@@ -1,0 +1,23 @@
+[package]
+name = "audio-stream-control"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Tray app to choose which sounds are copied into a PipeWire sink you stream from"
+license = "MIT"
+repository = "https://github.com/AkuLinker/audio-stream-control"
+readme = "README.md"
+keywords = ["pipewire", "audio", "tray", "linux", "streaming"]
+categories = ["multimedia::audio"]
+
+[dependencies]
+anyhow = "1.0.104"
+ctrlc = { version = "3.5.2", features = ["termination"] }
+eframe = { version = "0.33.3", default-features = false, features = ["glow", "wayland", "x11", "default_fonts"] }
+ksni = { version = "0.3.7", default-features = false, features = ["async-io", "blocking"] }
+pipewire = "0.10.1"
+serde = { version = "1.0.229", features = ["derive"] }
+tiny-skia = "0.12.0"
+toml = "1.2.1"
+
+[workspace]
